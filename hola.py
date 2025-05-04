@@ -1,3 +1,5 @@
 print("hola mundo")
 print("peroburguer")
 print("buenas tardes")
+print("buenas noches")
+print("adios")
