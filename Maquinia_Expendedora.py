@@ -73,7 +73,7 @@ def retirar_producto():
 
 # Funciones de inventario
 def menu_inventario():
-    print("\n--- INVENTARIO ---")
+    print("\nINVENTARIO")
     print("1. Añadir unidad a un producto")
     print("2. Añadir producto nuevo")
     print("3. Mostrar inventario actual")
@@ -99,9 +99,10 @@ def menu_inventario():
         print("Opción inválida.")
 
 def mostrar_inventario():
-    print("\n--- INVENTARIO ACTUAL ---")
+    print("\nINVENTARIO ACTUAL")
     for i, nombre in enumerate(productos):
         print(f"{i}. {nombre} - Precio: ${precios[i]}, Cantidad: {cantidades[i]}")
+
 
 # Informes
 def informes():
@@ -114,11 +115,22 @@ def informes():
 
 # Configuración
 def configuracion():
-    print("\n--- CONFIGURACIÓN ---")
-    print("1. Restaurar valores de fábrica")
+    print("\nCONFIGURACIÓN")
+    print("1. Cambiar moneda")
+    print("2. Restaurar valores de fábrica")
     opcion = input("Seleccione una opción: ")
     if opcion == '1':
+        conversion_de_moneda()
+        print("Moneda cambiada a dólares.")
+    elif opcion == '2':
         restaurar_valores_fabrica()
+
+
+def conversion_de_moneda():
+    for i in range(len(precios)):
+        precios[i] = float(round(precios[i] * 0.00025, 2))
+        # Cambia el precio a dólares (suponiendo que 1 dólar = 4000 pesos)
+
 
 def restaurar_valores_fabrica():
     global productos, precios, cantidades, ganancias, ventas
@@ -129,7 +141,7 @@ def restaurar_valores_fabrica():
         "Pepsi", "Manzana", "Colombiana", "Uva"
     ]
     precios = [
-        1000, 1500, 500, 900,
+        1000, 1500, 500, 900, 
         500, 700, 600, 800,
         1000, 1800, 900, 2500,
         1500, 1500, 1500, 1500
@@ -138,6 +150,7 @@ def restaurar_valores_fabrica():
     ganancias = 0
     ventas = [0] * len(productos)
     print("Sistema restaurado a valores de fábrica.")
+
 
 # Ejecutar el sistema
 run()
