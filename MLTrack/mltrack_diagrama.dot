@@ -1,0 +1,71 @@
+digraph MLTrack {
+    rankdir=TB;
+    node [shape=box, style=rounded];
+
+    inicio [label="Inicio"];
+    menu_principal [label="Menú Principal"];
+    iniciar_sesion [label="Iniciar sesión"];
+    validar_credenciales [label="Validar credenciales"];
+    usuario_valido [label="Usuario válido?", shape=diamond];
+    mostrar_error [label="Mostrar error\ny volver a menú"];
+    rol_usuario [label="Rol del usuario"];
+    menu_comprador [label="Menú Comprador"];
+    menu_vendedor [label="Menú Vendedor"];
+    opciones_comprador [label="Opciones Comprador"];
+    opciones_vendedor [label="Opciones Vendedor"];
+    ejecutar_funcion_comprador [label="Ejecutar función\ncorrespondiente"];
+    ejecutar_funcion_vendedor [label="Ejecutar función\ncorrespondiente"];
+    cerrar_sesion_comprador [label="Cerrar sesión?", shape=diamond];
+    cerrar_sesion_vendedor [label="Cerrar sesión?", shape=diamond];
+    volver_menu_comprador [label="Volver al menú Comprador"];
+    volver_menu_vendedor [label="Volver al menú Vendedor"];
+    volver_menu_principal [label="Volver al menú Principal"];
+    registrarse [label="Registrarse"];
+    ingresar_datos [label="Ingresar datos"];
+    guardar_usuario [label="Guardar usuario"];
+    asignar_rol [label="Asignar rol"];
+    ir_menu_rol [label="Ir al menú según rol"];
+    salir [label="Salir"];
+    fin [label="Fin del programa"];
+
+    inicio -> menu_principal;
+
+    menu_principal -> iniciar_sesion [label="1"];
+    menu_principal -> registrarse [label="2"];
+    menu_principal -> salir [label="3"];
+
+    iniciar_sesion -> validar_credenciales;
+    validar_credenciales -> usuario_valido;
+
+    usuario_valido -> rol_usuario [label="Sí"];
+    usuario_valido -> mostrar_error [label="No"];
+    mostrar_error -> menu_principal;
+
+    rol_usuario -> menu_comprador [label="Comprador"];
+    rol_usuario -> menu_vendedor [label="Vendedor"];
+
+    menu_comprador -> opciones_comprador;
+    opciones_comprador -> ejecutar_funcion_comprador;
+    ejecutar_funcion_comprador -> cerrar_sesion_comprador;
+
+    cerrar_sesion_comprador -> volver_menu_comprador [label="No"];
+    cerrar_sesion_comprador -> volver_menu_principal [label="Sí"];
+    volver_menu_comprador -> menu_comprador;
+
+    menu_vendedor -> opciones_vendedor;
+    opciones_vendedor -> ejecutar_funcion_vendedor;
+    ejecutar_funcion_vendedor -> cerrar_sesion_vendedor;
+
+    cerrar_sesion_vendedor -> volver_menu_vendedor [label="No"];
+    cerrar_sesion_vendedor -> volver_menu_principal [label="Sí"];
+    volver_menu_vendedor -> menu_vendedor;
+
+    registrarse -> ingresar_datos;
+    ingresar_datos -> guardar_usuario;
+    guardar_usuario -> asignar_rol;
+    asignar_rol -> ir_menu_rol;
+    ir_menu_rol -> menu_comprador [label="Comprador"];
+    ir_menu_rol -> menu_vendedor [label="Vendedor"];
+
+    salir -> fin;
+}
