@@ -1,0 +1,23 @@
+[
+    {
+        "id": "ped1",
+        "comprador": "juan",
+        "id_producto": "p1",
+        "cantidad": 2,
+        "estado": "Pendiente"
+    },
+    {
+        "id": "p1",
+        "comprador": "juan",
+        "id_producto": "p1",
+        "cantidad": 4,
+        "estado": "Pendiente"
+    },
+    {
+        "id": "pero",
+        "comprador": "juan",
+        "id_producto": "p2",
+        "cantidad": 2,
+        "estado": "Pendiente"
+    }
+]

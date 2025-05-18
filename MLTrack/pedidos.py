@@ -32,3 +32,4 @@ def actualizar_estado_pedido(id_pedido, nuevo_estado):
             guardar_pedidos(pedidos)
             return True
     return False
+

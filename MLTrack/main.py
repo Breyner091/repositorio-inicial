@@ -16,7 +16,7 @@ def login():
 
 def menu_principal():
     while True:
-        print("\n--- MENÚ PRINCIPAL ---")
+        print("\n======= MENÚ PRINCIPAL =======")
         print("1. Iniciar sesión")
         print("2. Salir")
         opcion = input("Seleccione una opción: ")

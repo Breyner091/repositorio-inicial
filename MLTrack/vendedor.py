@@ -4,7 +4,7 @@ from pedidos import listar_pedidos_por_vendedor, actualizar_estado_pedido
 
 def menu_vendedor(usuario_actual):
     while True:
-        print("\n--- MENÚ VENDEDOR ---")
+        print("\n======= MENÚ VENDEDOR =======")
         print("1. Ver mis productos")
         print("2. Agregar nuevo producto")
         print("3. Ver pedidos de mis productos")

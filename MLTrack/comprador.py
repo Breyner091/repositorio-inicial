@@ -5,7 +5,7 @@ from faq_bot import responder_pregunta
 
 def menu_comprador(usuario_actual):
     while True:
-        print("\n--- MENÚ COMPRADOR ---")
+        print("\n====== MENÚ COMPRADOR ======")
         print("1. Ver productos disponibles")
         print("2. Hacer pedido")
         print("3. Ver mis pedidos")

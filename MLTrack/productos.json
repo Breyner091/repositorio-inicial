@@ -1,0 +1,16 @@
+[
+    {
+        "id": "p1",
+        "nombre": "Camisa",
+        "precio": 25,
+        "stock": 6,
+        "vendedor": "maria"
+    },
+    {
+        "id": "p2",
+        "nombre": "Pantal\u00f3n",
+        "precio": 40,
+        "stock": 3,
+        "vendedor": "maria"
+    }
+]

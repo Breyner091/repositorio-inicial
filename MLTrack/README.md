@@ -68,4 +68,9 @@ Agregar búsqueda avanzada de productos.
 Añadir reportes y estadísticas.
 
 Autor
-Kevin - Proyecto de Ingeniería de Software
+
+Kevin vergara
+Dayner Osorio
+Breyner Ruiz
+ - Proyecto de Ingeniería de Software
+```
